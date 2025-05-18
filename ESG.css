@@ -835,5 +835,98 @@ footer {
   text-align: justify;
 }
 
+/* -------------------- 響應式設計：手機介面設定 -------------------- */
+@media (max-width: 768px) {
+  /*圖文區塊由左右變上下排列*/
+  .explain-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .explain-box img {
+    width: 100%;        /* 圖片寬度滿版 */
+    height: auto;       /* 高度自動 */
+  }
+
+  /* 導覽列文字靠中，間距縮小 */
+  .menu li {
+    width: auto;
+    margin: 0 4px;
+    padding: 10px 0;
+  }
+
+  /* 卡片寬度縮小 */
+  #ranking .card,
+  #training .card {
+    width: 90%;
+  }
+
+  /* 卡片文字大小微調 */
+  .card h3,
+  .percentage,
+  .company-list li,
+  .card-back ol li {
+    font-size: 16px;
+  }
+
+  /* 職務與年資兩欄佔滿 */
+  .position-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .position-block {
+    max-width: 90%;
+  }
+
+  /* 2050 淨零路徑排版調整 */
+  .netzero-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .netzero-img img {
+    width: 100%;
+  }
+
+  /* NDC 目標與減量排版調整 */
+  .tab-layout {
+    flex-direction: column;
+  }
+  .tab-img img {
+    width: 100%;
+  }
+
+  /* 碳排計算排版調整 */
+  .input-group .row {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* 訓練發展卡片排版調整 */
+  #training .card-group {
+    gap: 20px;
+  }
+
+  /* 範疇與建議區塊排成上下 */
+  #scope-suggestion {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .scope-left,
+  .scope-right {
+    width: 100%;
+  }
+
+  /* 表格字體調整 */
+  #count_data th,
+  #count_data td {
+    font-size: 14px;
+  }
+
+  /* 排名卡片更多連結靠右顯示 */
+  #ranking .more {
+    text-align: right;
+  }
+}
+
 
 
