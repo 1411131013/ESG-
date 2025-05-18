@@ -1,0 +1,839 @@
+@charset "utf-8";
+
+/*視窗底色與設定*/
+body{
+	background-color:#ffffff;
+	margin: 0;                /*確保導覽列貼齊上方*/
+}
+
+/*標題、頁尾置中設定*/
+h1,footer {
+	text-align: center;
+}
+
+/*標題顏色設定*/
+h1{
+	color: #66AFD0;
+	letter-spacing: 3px;
+}
+
+
+/*圖片樣式設定*/
+.explain-box img{
+	border-radius: 10px;   /*圖片圓角*/
+	float: left;           /*靠左對齊*/
+}
+
+/*區塊間分隔*/
+section + section {
+	margin-top: 30px;
+}
+
+/*頁尾顏色設定*/
+footer {
+	background-color: #66AFD0;
+	color: #ffffff;
+	height: 40px;
+	font-weight: bold;
+	padding-top: 10px;
+	letter-spacing: 3px; /*英文或中文字之間間距增加*/
+}
+/*-----------------------區塊：導覽列----------------------------*/
+/*導覽列底色*/
+.menu {
+	text-align:right;
+	background-color:#66AFD0;
+	margin: 0px;
+	border: 0px;
+
+}
+
+/* 移除 ul 預設樣式 */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*導覽列項目設定*/
+.menu li {
+	list-style-type: none;    /*符號無(原本為圓點)*/
+	display: inline-block;    /*將元素排在同一列 block可以設定寬度*/
+	width: 100px;
+	margin: 0 10px;
+	padding: 14px 0;
+}
+
+/*導覽列連結顏色*/
+.menu a {
+	display: block; 	  /*寬度與父元素相同*/
+	color: #ffffff;		  /*不顯示超連結底線*/
+	text-decoration: none;
+
+}
+
+.menu a:hover,
+.menu a.active {           /*滑鼠移入時*/
+	color: #FF955B;
+	text-decoration: underline; /*顯示超連結底線*/
+}
+
+/*-----------------------page1----------------------------*/
+/*-----------------------區塊：名詞解釋----------------------------*/
+/*碳權區塊居中*/
+.carbon-block {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+
+/*碳權區塊 -> 設定文字內容的區塊排列*/
+.explain-box {
+  display: flex;            /*彈性排列*/
+  align-items: flex-start;  /*對齊explain-box的上方*/
+  gap: 24px;				/*子元素間距*/
+}
+
+/*碳權 -> 圖片樣式（左側）*/
+.explain-box img {
+  width: 240px;
+  height: 180px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/*碳權 -> 文字區塊樣式（右側）*/
+.text-content {
+  flex: 1;                    /* 佔滿剩下空間 */
+}
+.text-content h2 {
+  margin-top: 10px;
+}
+.text-content p {
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+
+
+/*解除樣式*/
+.clearfix::after {
+	display: block;
+	clear: both;    
+}
+
+
+/*-----------------------區塊：碳排計算----------------------------*/
+.btn.add {
+  background-image: url('./image/add.png');   /*替換為你圖片的路徑*/
+  background-repeat: no-repeat;				  /*不要讓圖片重複出現*/
+  background-position: center;
+  background-size: contain; 				  /*讓圖片按比例縮放*/
+  background-color: transparent;			  /*不要有底色干擾圖片*/
+  border: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;							  /*游標變成手指*/
+}
+.btn.reduce {
+  background-image: url('./image/reduce.png'); /* 替換為你圖片的路徑 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* 讓圖片按比例縮放 */
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#useing {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Noto Sans TC", sans-serif;
+
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;         /*元素太多自動換行*/
+  justify-content: center; /*元素置中排列*/
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.item label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.controller {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.controller .btn {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.controller input {
+  width: 60px;
+  height: 55px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .row {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.use_text {
+	background-color: #BDD8E9;
+	color: #000;
+	font-weight: bold;
+	width: auto;
+	padding: 5px;
+	text-align: center;
+	font-family: "Noto Sans TC", sans-serif;
+	letter-spacing: 1px; /*英文或中文字之間間距增加1px*/
+}
+
+
+
+/*-----------------------區塊：表格----------------------------*/
+/*碳排計算區塊*/
+#count {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*表格樣式設定*/
+#count table {
+  width: 100%;
+  border-collapse: collapse;  /*邊框合併更乾淨*/
+  margin-top: 20px;
+  font-size: 16px;
+  table-layout: fixed;       /*讓欄寬一致*/
+}
+
+/*表頭樣式*/
+#count th {
+  background-color: #66AFD0;
+  color: white;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+/*表格每格樣式（含資料列）*/
+#count td {
+  padding: 16px 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  line-height: 1.5;
+  word-wrap: break-word; /*內容太長就自動換行*/
+}
+
+/*第一欄（類別）靠左對齊*/
+#count td:first-child {
+  text-align: left;
+  font-weight: bold;
+  background-color: #f0f5fa;
+}
+
+/*-----------------------區塊：企業排名----------------------------*/
+
+/*企業排名區塊*/
+#ranking {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/*說明文字段落樣式*/
+#ranking .ranking-desc {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/*卡片群組容器設定：橫向排列卡片*/
+#ranking .ranking-cards {
+  display: flex;
+  justify-content: center; /*讓3張卡片置中*/
+  gap: 50px;
+  flex-wrap: wrap;         /*卡片太多時會自動換行*/
+}
+
+/*單張卡片設定*/
+#ranking .card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px 20px 0px 20px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+/*滑鼠移入卡片時浮起效果*/
+#ranking .card:hover {
+  transform: translateY(-6px);
+}
+
+/*卡片上方header區塊（溫度圖+標籤+標題)*/
+#ranking .card-header {
+  display: flex;                     /*圖左文字右排列*/
+  justify-content: flex-start;       /* 左側對齊 */
+  align-items: center;               /* 垂直置中 */
+  gap: 12px;                         /* 圖與文字間距 */
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* 溫度計圖片設定 */
+.card-header .thermometer {
+  flex-shrink: 0;                     /* 圖片不縮小 */
+
+}
+
+/* 標籤+標題排版容器 */
+.card-header .header-text {
+  display: flex;
+  flex-direction: column;             /*直向排列*/
+  align-items: center;			  	  /*文字靠左*/
+  justify-content: center;            /*垂直置中對齊*/
+  line-height: 0.8;                   /*讓上下文字靠近一些*/
+  gap: 2px;
+}
+
+/*卡片標題顏色*/
+.card h3 {
+	color: black;
+	font-size: 24px;
+	margin: 10px 0px;
+}
+
+/*卡片header顏色設定（依分類）*/
+.tag.blue { background-color: #8eaef2; }
+.tag.pink { background-color: #ef91ca; }
+.tag.teal { background-color: #6eddd4; }
+
+.tag {
+	padding: 5px;
+}
+
+/*百分比文字樣式*/
+.percentage {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*企業名稱清單樣式*/
+.company-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 ;
+}
+
+/* 單一企業名稱項目樣式 */
+.company-list li {
+  border-top: 1px solid #ccc;
+  padding: 6px 0;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+}
+
+/*連結樣式（查看更多企業）*/
+#ranking .more {
+  font-size: 14px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;           /*讓它可以用 text-align 控制*/
+  text-align: right ;
+  margin-top: auto;         /*自動推到底部，讓空白最小化*/
+  padding-top: 8px;
+  border-top: 1px solid #ccc;
+  
+}
+
+#ranking .more:hover {
+  text-decoration: underline;
+}
+
+/*-----------------------page2----------------------------*/
+/*-----------------------區塊：聯詠科技社會面----------------------------*/
+#society {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/*文字加圖片的框架*/
+.society-content {
+  display: flex;
+  justify-content: space-between;    /*左右兩側分開排列*/
+  align-items: center;				 /*垂直置中對齊*/
+  gap: 40px;
+  flex-wrap: wrap; 					 /*螢幕窄時允許換行*/
+  padding-bottom: 50px;
+  border-bottom: 1px solid #BDD8E9;
+}
+
+.society-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.society-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+  text-align: justify;				/*文字左右對齊（更整齊）*/
+}
+
+.society-image {
+  flex: 1;
+  min-width: 400px;
+  text-align: right;
+  padding-top: 20px;
+}
+
+.society-image img {
+  width: 100%;
+  height: auto;
+  max-width: 740px;
+  border-radius: 16px;
+}
+
+/*-----------------------區塊：訓練發展體系----------------------------*/
+/*訓練發展區塊基本樣式*/
+#training {
+  padding: 40px;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  max-width: 1000px;
+  border-bottom: 1px solid #BDD8E9;
+  margin: 0 auto;
+}
+
+/*卡片群組排列：橫向置中、可換行*/
+#training .card-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;				/*螢幕窄時允許換行*/
+  margin-top: 50px;
+}
+
+/*卡片外框，設定3D透視效果，卡片本身有設定格式須清除*/
+#training .card {
+  width: 200px;
+  height: 280px;
+  perspective: 1000px;			/*讓內部旋轉有立體感，通常使用於外部容器*/
+  background-color: transparent;/*清除白色背景*/
+  box-shadow: none; 			/*清除陰影*/
+}
+
+/*卡片內部容器，負責旋轉效果*/
+#training .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;			/*定點參考*/
+  transform-style: preserve-3d; /*保留這個元素內部的 3D 層次效果*/
+  transition: transform 0.8s;	/*翻轉動畫時間*/
+}
+
+/*滑鼠移入時，內層旋轉 180 度（翻面）*/
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/*正面與背面共用樣式：定位、圓角、置中*/
+.card-front, .card-back {
+  position: absolute;			/*使卡片前後能重疊*/
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;	/*背面時不顯示*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*正面樣式：背景藍色、白字*/
+.card-front {
+  background-color: #4e88a3;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/*背面樣式：白底黑字，邊框、標題、清單*/
+.card-back {
+  background-color: #ffffff;
+  color: #000;
+  transform: rotateY(180deg);
+  padding: 10px 20px 20px 20px;
+  font-weight: normal;
+  border: 2px solid #4e88a3;
+  font-size: 18px;
+  flex-direction: column;  		/*垂直排列*/
+  justify-content: flex-start;  /*從上往下排*/
+  align-items: flex-start;      /*靠左對齊（可選）*/
+}
+
+/*背面標題區：灰藍底、圓角、粗體*/
+.card-back h3 {
+  width: 135px;
+  background-color: #cde0e8;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #8B818A;
+  margin-bottom: 10px;
+}
+
+/*項目清單設定*/
+.card-back ol {
+  padding-left: 20px;
+  margin: 0;
+  text-align: left; 
+}
+
+/*項目清單行高調整*/
+.card-back ol li {
+  line-height: 1.7; 	/* 數字越大，行距越寬*/
+}
+
+/*-----------------------區塊：職務與年資----------------------------*/
+/*職務與年資設定*/
+#Position {
+  padding: 40px;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+}
+
+/*全部的標題+圖片區塊*/
+.position-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/*單一標題+圖片區塊*/
+.position-block {
+  text-align: left;
+  max-width: 500px;
+}
+
+/*職務與年資的標題*/
+.position-block h2 {
+  font-size: 20px;
+  color: #4e88a3;
+  margin-bottom: 10px;
+}
+
+/*職務與年資的圖片*/
+.position-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*-----------------------page3----------------------------*/
+/*-----------------------區塊：2050 淨零路徑----------------------------*/
+/*2050淨零路徑大區塊*/
+#netzero {
+  padding: 60px 30px;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*2050淨零路徑小區塊 文字+圖片+按鈕*/
+.netzero-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/*文字格式設定*/
+.netzero-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/*文字樣式設定*/
+.netzero-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/*按鈕設定*/
+.readmore {
+  display: inline-block;
+  background-color: #4e88a3;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*滑鼠移過去按鈕產生變化*/
+.readmore:hover {
+  background-color: #10344e;
+}
+
+/*圖片格式設定*/
+.netzero-img img {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/*-----------------------區塊：NDC目標+氣體排放及減量----------------------------*/
+/*區塊總容器樣式*/
+.tab-section {
+  background-color: #eaf5fc;
+  padding: 60px 30px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/*按鈕容器區塊*/
+.tab-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*標籤按鈕樣式*/
+.tab-buttons label {
+  background-color: #66AFD0;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* 勾選時的按鈕變色（使用 radio + label） */
+#tab1:checked ~ .tab-buttons label[for="tab1"],
+#tab2:checked ~ .tab-buttons label[for="tab2"] {
+  background-color: #2d5f73;
+}
+
+/* 所有內容預設隱藏 */
+.tab-contents .tab-content {
+  display: none;
+}
+
+/* 根據勾選顯示對應內容 */
+#tab1:checked ~ .tab-contents .content1,
+#tab2:checked ~ .tab-contents .content2 {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 內文與圖片左右排列設定 */
+.tab-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 左邊文字內容區塊 */
+.tab-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  text-align: left;
+}
+
+/* 文字段落樣式 */
+.tab-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* 右側圖片樣式 */
+.tab-img img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* 讀取更多按鈕樣式 */
+.readmore {
+  display: inline-block;
+  background-color: #4e88a3;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 淡入動畫 keyframe */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/*-----------------------page4----------------------------*/
+/*-----------------------溫室氣體數據表格區塊----------------------------*/
+/*溫室氣體計算區塊*/
+#count_data {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*表格樣式設定*/
+#count_data table {
+  width: 100%;
+  border-collapse: collapse;  /*邊框合併更乾淨*/
+  margin-top: 20px;
+  font-size: 16px;
+  table-layout: fixed;       /*讓欄寬一致*/
+}
+
+/*表頭樣式*/
+#count_data th {
+  background-color: #66AFD0;
+  color: white;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+/*表格每格樣式（含資料列）*/
+#count_data td {
+  padding: 16px 12px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  line-height: 1.5;
+  word-wrap: break-word; /*內容太長就自動換行*/
+}
+
+/*第一欄（類別）靠左對齊*/
+#count_data td:first-child {
+  text-align: left;
+  font-weight: bold;
+  background-color: #f0f5fa;
+}
+
+/*指定表格更換顏色*/
+#count_data tr:nth-child(5) td:nth-child(3),
+#count_data tr:nth-child(5) td:nth-child(4),
+#count_data tr:nth-child(6) td:nth-child(3),
+#count_data tr:nth-child(6) td:nth-child(4) {
+  color: #FF955B; 		/*橘色*/
+  font-weight: bold;
+}
+
+/*-----------------------區塊：範疇說明和結論與建議----------------------------*/
+#scope-suggestion {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f8faff;
+  font-family: "Noto Sans TC", sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.scope-left, .scope-right {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 450px;
+  box-sizing: border-box;
+}
+
+.scope-left h2, .scope-right h2 {
+  font-size: 20px;
+  color: #4e88a3;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #BDD8E9;
+  padding-bottom: 10px;
+}
+
+.scope-left ul {
+  padding-left: 20px;
+}
+
+.scope-left li {
+  margin-bottom: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.scope-right p {
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+
+

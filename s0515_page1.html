@@ -1,0 +1,188 @@
+<!DOCTYPE html> <!--宣告文件版本-->
+<html lang="en"> <!--文件語言 zh-TW(繁體中文)-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="ESG,環境,社會,政府">
+	<title>ESG介紹網站</title>
+	<style>
+		@import url(./s0514.css);
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<ul>
+				<li><a href="./s0515_page1.html" class="active"><strong>碳排交易</strong></a></li>
+				<li><a href="./s0515_page2.html"><strong>社會共榮</strong></a></li>
+				<li><a href="./s0515_page3.html"><strong>相關政策</strong></a></li>
+				<li><a href="./s0515_page4.html"><strong>企業探討</strong></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="explain"> 
+			<h1>| 名詞解釋 |</h1>
+			<div class="carbon-block">
+				<div class="explain-box">
+					<img src="./image/1.png" width="240" height="180" alt="碳權" >
+					<div class="text-content">
+						<h2>碳權（Carbon credit）</h2>
+						<p class="clearfix">《京都議定書》後各國及企業被分配一定額度碳排放權利，簡稱碳權，企業或國家若實際排放的二氧化碳低於獲配發的額度，可以到市場買賣。這也是首次將抽象的環境概念轉換為金融商品。</p>
+					</div>
+				</div>	
+			</div>
+		</section>
+
+		<section id="useing"> 
+			<h1>| 碳排計算 |</h1>
+			<div class="input-group">
+				<div class="row">
+					<!-- 電力使用 -->
+					<div class="item">
+						<label>電力使用 (度/年)</label>
+						<div class="controller">
+							<button class="btn add"></button>
+							<input type="text" value="1" readonly>
+							<button class="btn reduce"></button>
+						</div>
+					</div>
+
+					<!-- 車用汽油 -->
+					<div class="item">
+					<label>車用汽油 (公升/年)</label>
+						<div class="controller">
+							<button class="btn add"></button>
+							<input type="text" value="1" readonly>
+							<button class="btn reduce"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<!-- 柴油使用 -->
+					<div class="item">
+					<label>柴油使用 (公升/年)</label>
+						<div class="controller">
+							<button class="btn add"></button>
+							<input type="text" value="1" readonly>
+							<button class="btn reduce"></button>
+						</div>
+					</div>
+
+					<!-- 天然氣使用 -->
+					<div class="item">
+					<label>天然氣使用 (度/年)</label>
+						<div class="controller">
+							<button class="btn add"></button>
+							<input type="text" value="1" readonly>
+							<button class="btn reduce"></button>
+						</div>
+					</div>
+
+					<!-- 桶裝瓦斯使用 -->
+					<div class="item">
+					<label>桶裝瓦斯使用 (公升/年)</label>
+						<div class="controller">
+							<button class="btn add"></button>
+							<input type="text" value="1" readonly>
+							<button class="btn reduce"></button>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<p class="use_text">碳排總計： 0.04 公噸 CO2e/年</p>
+		</section>
+
+		<section id="count"> 
+			<table>
+				<tr>
+					<th>類別</th>
+					<th>探費</th>
+					<th>碳稅</th>
+					<th>碳交易</th>
+				</tr>
+				<tr>
+					<td>收費機制</td>
+					<td>企業製造多少碳排放，繳交相對費用給環保署</td>
+					<td>企業製造多少碳排放，繳交稅金給財政部</td>
+					<td>企業評估減碳成本與市場碳價後，向其他企業買賣碳權</td>
+				</tr>
+				<tr>
+					<td>概念</td>
+					<td>污染者付費，費用專款專用</td>
+					<td>污染者付費，稅金統收統支</td>
+					<td>以總量管制降低碳排放</td>
+				</tr>
+			</table>
+		</section> 
+
+		<section id="ranking">
+		    <h1>| 企業排名 |</h1>
+		    <p class="ranking-desc">相較於二氧化碳排放量數字的多寡，社會大眾更直觀、有感的，是溫度的升降！可以點進去網站帶一下各企業的資訊、數據的顯示</p>
+
+		    <div class="ranking-cards">
+			    <!-- 成效卓越 -->
+			    <div class="card">
+			        <div class="card-header">
+			      		<img src="./image/temperature1.png" width="60" height="60" alt="溫度計" >
+			      		<div class="header-text">
+			        		<span class="tag blue">升溫1.6度以下</span>
+			        		<h3>成效卓越</h3>
+			        	</div>
+			        </div>
+			      
+			        <p class="percentage">13.1%</p>
+			        <ul class="company-list">
+				        <li>晶技</li>
+				        <li>台積電</li>
+				        <li>漢翔</li>
+			        </ul>
+			      <p class="more">共有96間企業</p>
+			    </div>
+
+			    <!-- 表現優秀 -->
+			    <div class="card">
+			        <div class="card-header">
+			        	<img src="./image/temperature2.png" width="60" height="60" alt="溫度計" >
+			        	<div class="header-text">
+				        	<span class="tag pink">升溫1.6~2.1度</span>
+				        	<h3>表現優秀</h3>
+				        </div>
+			        </div>
+			      
+			        <p class="percentage">7.3%</p>
+			        <ul class="company-list">
+				        <li>特力</li>
+				        <li>國泰金</li>
+				        <li>聯電</li>
+			        </ul>
+			        <p class="more">共有54間企業</p>
+			    </div>
+
+			    <!-- 投入積極 -->
+			    <div class="card">
+			        <div class="card-header">
+			        	<img src="./image/temperature3.png" width="60" height="60" alt="溫度計" >
+			        	<div class="header-text">
+			        		<span class="tag teal">升溫2.1~3.0度</span>
+			        		<h3>投入積極</h3>
+			        	</div>
+			        </div>
+			        
+			        <p class="percentage">9.8%</p>
+			        <ul class="company-list">
+				        <li>貨櫃</li>
+				        <li>中華化</li>
+				        <li>中宇</li>
+			        </ul>
+			        <p class="more">共有72間企業</p>
+			    </div>
+		    </div>
+		</section>
+
+	</main>
+
+	<footer> 資管三1  1411131013  陳湘儒 </footer>
+</body>
+</html>
