@@ -857,12 +857,12 @@ footer {
 
   /* 企業排名卡片寬度縮小 */
   #ranking .card {
-    width: 40%;
+    width: 50%;
   }
 
   /* 訓練發展體系卡片寬度縮小 */
   #training .card {
-    width: 50%;
+    width: 60%;
   }
 
   /* 卡片文字大小微調 */
