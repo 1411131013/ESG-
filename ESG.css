@@ -844,7 +844,7 @@ footer {
   }
 
   .explain-box img {
-    width: 100%;        /* 圖片寬度滿版 */
+    width: 95%;        /* 圖片寬度滿版 */
     height: auto;       /* 高度自動 */
   }
 
@@ -855,10 +855,14 @@ footer {
     padding: 10px 0;
   }
 
-  /* 卡片寬度縮小 */
-  #ranking .card,
+  /* 企業排名卡片寬度縮小 */
+  #ranking .card {
+    width: 40%;
+  }
+
+  /* 訓練發展體系卡片寬度縮小 */
   #training .card {
-    width: 90%;
+    width: 50%;
   }
 
   /* 卡片文字大小微調 */
@@ -885,6 +889,21 @@ footer {
   }
   .netzero-img img {
     width: 100%;
+  }
+  /*NDC 目標與減量按鈕調整 */
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tab-buttons label {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    word-break: break-word; /* 避免長單字超出 */
   }
 
   /* NDC 目標與減量排版調整 */
